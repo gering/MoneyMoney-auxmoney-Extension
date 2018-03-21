@@ -52,7 +52,7 @@ function InitializeSession(protocol, bankCode, username, username2, password, us
   html = HTML(connection:request(html:xpath("//input[@id='loginSubmit']"):click()))
 
   if html:xpath("//a[@href='/logout']"):length() == 0 then
-  	MM.printStatus("Login Failed")
+          MM.printStatus("Login Failed")
     return LoginFailed
   end
 end
@@ -113,7 +113,7 @@ function RefreshAccount(account, since)
 end
 
 function EndSession()
-  html = HTML(connection:request(html:xpath("//a[@href='/logout']"):click()))  
+  html = HTML(connection:request(html:xpath("//a[@href='/logout']"):click()))
 end
 
 -- Helper
@@ -123,3 +123,4 @@ function stripChars(str, chrs)
   return s
 end
 
+-- SIGNATURE: MC0CFD64zzMGBFSEY7SAdugXIJvNut/2AhUAiFBu7pBGoBao3pAOuDEDH/hse4A=
